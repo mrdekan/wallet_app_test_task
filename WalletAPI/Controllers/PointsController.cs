@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WalletAPI.Services;
 
 namespace Wallet.Controllers
 {
@@ -9,7 +10,7 @@ namespace Wallet.Controllers
         [HttpGet]
         public IActionResult GetDailyPoints()
         {
-            return Ok();
+            return Ok(new { Points = PointsService.GetPoints() });
         }
     }
 }
