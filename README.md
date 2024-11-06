@@ -18,7 +18,10 @@ To run the project, you need to create an `appsettings.json` file in the `Wallet
   }
 }
 ```
-To apply the database migrations, open your terminal in Visual Studio and run: ```Update-Database```
-Or use the following command in your command line: ```dotnet ef database update```
+To apply the database migrations, open your terminal in Visual Studio and run:   
+```Update-Database```  
+
+Or use the following command in your command line:   
+```dotnet ef database update```
 
 Start the project, then open [https://localhost:7014/swagger/index.html](https://localhost:7014/swagger/index.html) in your browser if it doesn't open automatically.
