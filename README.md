@@ -18,7 +18,7 @@ To run the project, you need to create an `appsettings.json` file in the `Wallet
   }
 }
 ```
-To apply the database migrations, open your terminal in Visual Studio and run:   
+To apply the database migrations, open your Package Manager Console in Visual Studio and run:   
 ```Update-Database```  
 
 Or use the following command in your command line:   
