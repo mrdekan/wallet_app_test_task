@@ -12,9 +12,10 @@ namespace Wallet.Repositories
         {
             _dbContext = dbContext;
         }
+
         public async Task<List<TransactionEntity>> GetAllTransactions()
         {
-            return await _dbContext.Transactions.ToListAsync();
+            return await _dbContext.Transactions.OrderByDescending(t => t.Date).ToListAsync();
         }
 
         public async Task<TransactionEntity?> GetById(int id)

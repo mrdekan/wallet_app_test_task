@@ -5,10 +5,9 @@ namespace Wallet.Models.Entities
 {
     public class TransactionEntity
     {
-        public TransactionEntity()
-        {
+        //Blank ctor is required by EntityFramework
+        public TransactionEntity() { }
 
-        }
         [Key]
         public int Id { get; set; }
 

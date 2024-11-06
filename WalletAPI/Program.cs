@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Wallet.Data;
 using Wallet.Intrefaces;
 using Wallet.Repositories;
+using WalletAPI.Intrefaces;
+using WalletAPI.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,6 +15,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<WalletDbContext>(options =>
         options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<ITransactionsRepository, TransactionsRepository>();
+builder.Services.AddScoped<IPointsService, PointsService>();
+builder.Services.AddScoped<IFormatService, FormatService>();
+builder.Services.AddScoped<ICardService, CardService>();
 
 var app = builder.Build();
 
