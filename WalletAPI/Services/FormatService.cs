@@ -7,7 +7,7 @@ namespace WalletAPI.Services
         public string FormatPoints(ulong points)
         {
             if (points >= 1000)
-                return Math.Ceiling(points / 1000.0) + "K";
+                return Math.Round(points / 1000.0) + "K";
             return points.ToString();
         }
         public string GetRelativeDayDescription(DateTime date)
